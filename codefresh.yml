@@ -2,11 +2,14 @@ version: '1.0'
 steps:
   
   build-djanga:
-
     type: build
     dockerfile: Dockerfile
     image-name: ben/small
     tag: nicetag
-
-    
+  
+  build-djanga:
+    type: build
+    dockerfile: Dockerfile
+    image-name: ben/small2
+    tag: nicetag2
     
