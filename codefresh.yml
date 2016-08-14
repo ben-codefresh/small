@@ -12,4 +12,3 @@ steps:
     dockerfile: Dockerfile
     image-name: ben/small2
     tag: nicetag2
-    
