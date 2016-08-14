@@ -7,7 +7,7 @@ steps:
     image-name: ben/small
     tag: nicetag
   
-  build-djanga:
+  build-djanga2:
     type: build
     dockerfile: Dockerfile
     image-name: ben/small2
