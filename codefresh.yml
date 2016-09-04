@@ -10,7 +10,9 @@ steps:
   nothing:
     image: ubuntu:12.04
     commands:
-      - echo ben
+      - echo sleeping...
+      - sleep 60
+      - echo finsih sleeping
 
     
     
