@@ -8,6 +8,7 @@ steps:
     tag: nicetag
   
   nothing:
+    image: ubuntu:12.04
     commands:
       - echo ben
 
