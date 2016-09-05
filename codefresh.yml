@@ -1,7 +1,7 @@
 version: '1.0'
 steps:
   
-  build-djanga:
+  build-stuff:
     type: build
     dockerfile: DockerfileDist
     image-name: ben/small
@@ -9,12 +9,12 @@ steps:
   
   
   
-  nothing:
-    image: ubuntu:12.04
-    commands:
-      - echo sleeping...
-      - sleep 60
-      - echo finsih sleeping
+  # nothing:
+  #   image: ubuntu:12.04
+  #   commands:
+  #     - echo sleeping...
+  #     - sleep 2
+  #     - echo finsih sleeping
 
     
     
