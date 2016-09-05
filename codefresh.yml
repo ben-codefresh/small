@@ -3,7 +3,7 @@ steps:
   
   build-djanga:
     type: build
-    dockerfile: Dockerfile
+    dockerfile: DockerfileDist
     image-name: ben/small
     tag: nicetag
   
