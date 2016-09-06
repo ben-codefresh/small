@@ -3,11 +3,11 @@ steps:
   
   build-stuff:
     type: build
-    # dockerfile: DockerfileDist
-    dockerfile: 
-      content: |
-        FROM busybox
-        RUN echo $arg
+    dockerfile: DockerfileDist
+    # dockerfile: 
+    #   content: |
+    #     FROM busybox
+    #     RUN echo $arg
       
     image-name: ben/small
     tag: nicetag
