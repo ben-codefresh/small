@@ -3,7 +3,7 @@ steps:
   
   build-stuff:
     type: build
-    dockerfile: DockerfileDist
+    # dockerfile: DockerfileDist
       # content: |
       #   FROM busybox
       #   RUN echo the dolphin
