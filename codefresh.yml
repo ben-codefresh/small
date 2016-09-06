@@ -6,10 +6,13 @@ steps:
     dockerfile: 
       content: |
         FROM busybox
-        RUN echo the dolphin
+        RUN echo the $arg
       
     image-name: ben/small
     tag: nicetag
+    build-arguments:
+      -arg=dodo
+
   
   
   
