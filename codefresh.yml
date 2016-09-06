@@ -3,10 +3,10 @@ steps:
   
   build-stuff:
     type: build
-    dockerfile:
-      content: |
-        FROM busybox
-        RUN echo the dolphin
+    dockerfile: DockerfileDist
+      # content: |
+      #   FROM busybox
+      #   RUN echo the dolphin
       
     image-name: ben/small
     tag: nicetag
