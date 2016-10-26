@@ -6,8 +6,7 @@ steps:
     dockerfile: DockerfileDist
     image-name: ben/small
     tag: nicetag
-    build-arguments:
-      - arg=dodo
+  
       # dockerfile: 
     #   content: |
     #     FROM busybox
