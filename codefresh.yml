@@ -4,7 +4,7 @@ steps:
   build-stuff:
     type: build
     dockerfile: DockerfileDist
-    image-name: ben/small
+    image-name: bencodefresh/small
     tag: nicetag
   
       # dockerfile: 
