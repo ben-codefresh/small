@@ -3,14 +3,12 @@ steps:
   
   build-stuff:
     type: build
-    dockerfile: DockerfileDist
     image-name: bencodefresh/small
-    tag: nicetag
-  
-      # dockerfile: 
-    #   content: |
-    #     FROM busybox
-    #     RUN echo $arg
+    tag: nicetag  
+    dockerfile: 
+       content: |
+         FROM busybox
+         RUN echo $arg
       
 
   
