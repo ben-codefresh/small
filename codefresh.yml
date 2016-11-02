@@ -8,7 +8,7 @@ steps:
     dockerfile: 
        content: |
          FROM busybox
-         RUN echo $arg
+         RUN echo 'in an inline dockerfile'
       
 
   
