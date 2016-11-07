@@ -13,3 +13,10 @@ steps:
     image-name: ben/small2
     tag: nicetag2
     
+
+  build-djanga3:
+    type: build
+    dockerfile: Dockerfile
+    image-name: ben/small3
+    tag: nicetag2
+    
