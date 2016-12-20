@@ -6,6 +6,18 @@ steps:
     dockerfile: DockerfileDist
     image-name: bencodefresh/small
     tag: nicetag
+    metadata:
+      set:
+        - novalue
+        - qa: pending
+        - number_field: 123
+        - boolean_dd: true
+        - string: 'I am a very long string. need to see what happens in this case'
+        - ${{CF_BRANCH}}: blah blah
+        - commit_message: ${{CF_COMMIT_MESSAGE}}
+        - is_tested: 
+            evaluate: "’${{CF_COMMIT_MESSAGE}}’ == ‘blah’"
+
   
       # dockerfile: 
     #   content: |
