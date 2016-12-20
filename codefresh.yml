@@ -8,7 +8,6 @@ steps:
     tag: nicetag
     metadata:
       set:
-        - novalue
         - qa: pending
         - number_field: 123
         - boolean_dd: true
