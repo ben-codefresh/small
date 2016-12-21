@@ -10,7 +10,7 @@ steps:
       set:
         - qa: pending
         - number_field: 123
-        - boolean_dd: true
+        - boolean_dd: 'df sf sdf dsfdsf dsf sdf dsf dsf dsfdsf dsf sdf sdf dsf dsf dsf dsf ds fdsf dsdf sf sdf dsfdsf dsf sdf dsf dsf dsfdsf dsf sdf sdf dsf dsf dsf dsf ds fdsf dsdf sf sdf dsfdsf dsf sdf dsf dsf dsfdsf dsf sdf sdf dsf dsf dsf dsf ds fdsf dsdf sf sdf dsfdsf dsf sdf dsf dsf dsfdsf dsf sdf sdf dsf dsf dsf dsf ds fdsf ds'
         - string: 'I am a very long string. need to see what happens in this case'
         - ${{CF_BRANCH}}: blah blah
         - commit_message: ${{CF_COMMIT_MESSAGE}}
