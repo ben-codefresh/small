@@ -1,31 +1,27 @@
 version: '1.0'
 steps:
-  
-  build-stuff:
+  BuildingDockerImage:
+    title: Building Docker Image
     type: build
-    dockerfile: DockerfileDist
-    image-name: bencodefresh/small
-    tag: nicetag
-    metadata:
-      set:
-        - qa: ${{ENCRYPTED}}
-  
-      # dockerfile: 
-    #   content: |
-    #     FROM busybox
-    #     RUN echo $arg
-      
-
-  
-  
-  
-  
-  # nothing:
-  #   image: ubuntu:12.04
-  #   commands:
-  #     - echo sleeping...
-  #     - sleep 2
-  #     - echo finsih sleepingd
-
-    
-    
+    image_name: bencodefresh/small
+    working_directory: ./
+    dockerfile: Dockerfile
+  RunningUnitTests:
+    title: Running Unit Tests
+    image: '${{BuildingDockerImage}}'
+    working_directory: IMAGE_WORK_DIR
+    entry_point:
+      - /bin/sh
+      - /codefresh/volume/cf-generated/unit_test_script
+    create_file:
+      path: /codefresh/volume/cf-generated
+      name: unit_test_script
+      content: echo test
+    on_success:
+      metadata:
+        set:
+          - CF_QUALITY: true
+    on_fail:
+      metadata:
+        set:
+          - CF_QUALITY: false
