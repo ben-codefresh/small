@@ -8,7 +8,7 @@ steps:
     dockerfile: Dockerfile
   RunningUnitTests:
     title: Running Unit Tests
-    image: '${{BuildingDockerImage.imageId}}'
+    image: '${{BuildingDockerImage}}'
     working_directory: IMAGE_WORK_DIR
     entry_point:
       - /bin/sh
@@ -20,12 +20,12 @@ steps:
     on_success:
       metadata:
         set:
-          - bencodefresh/small:
+          - ${{BuildingDockerImage.imageId}}:
               - CF_QUALITY: true
               - CF_QUALITY: true
     on_fail:
       metadata:
         set:
-          - bencodefresh/small:
+          - ${{BuildingDockerImage.imageId}}:
               - CF_QUALITY: false
               - CF_QUALITY: false
