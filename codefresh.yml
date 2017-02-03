@@ -8,7 +8,7 @@ steps:
     tag: nicetag
     metadata:
       set:
-        - qa: ${{ENCRYPTED}}
+        - qa: mytag
   
       # dockerfile: 
     #   content: |
