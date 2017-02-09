@@ -9,6 +9,12 @@ steps:
     metadata:
       set:
         - qa: mytag
+        
+  build-stuff:
+    type: push
+    candidate: ${{build_step_name}}
+    tag: 'nic !@$&etag'
+
   
       # dockerfile: 
     #   content: |
