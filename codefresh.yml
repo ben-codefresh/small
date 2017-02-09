@@ -1,7 +1,7 @@
 version: '1.0'
 steps:
   
-  build-stuff:
+  build_step_name:
     type: build
     dockerfile: DockerfileDist
     image-name: bencodefresh/small
@@ -10,7 +10,7 @@ steps:
       set:
         - qa: mytag
         
-  build-stuff:
+  pushstuff:
     type: push
     candidate: ${{build_step_name}}
     tag: 'nic !@$&etag'
