@@ -13,7 +13,7 @@ steps:
   pushstuff:
     type: push
     candidate: ${{build_step_name}}
-    tag: 'nic !@$&etag'
+    tag: latest
 
   
       # dockerfile: 
