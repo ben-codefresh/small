@@ -13,7 +13,7 @@ steps:
   pushstuff:
     type: push
 #    candidate: ${{build_step_name}}
-    candidate: bencodefresh/small
+    candidate: bencodefresh/small:latest
     tag: latest
 
   
