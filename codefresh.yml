@@ -5,14 +5,15 @@ steps:
     type: build
     dockerfile: DockerfileDist
     image-name: bencodefresh/small
-    tag: nicetag
+    tag: latest
     metadata:
       set:
         - qa: mytag
         
   pushstuff:
     type: push
-    candidate: ${{build_step_name}}
+#    candidate: ${{build_step_name}}
+    candidate: bencodefresh/small
     tag: latest
 
   
