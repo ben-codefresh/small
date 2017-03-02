@@ -16,6 +16,7 @@ steps:
  #   candidate: bencodefresh/small:latest
  #   tag: latest
   middle:
+    working_directory: ${{main_clone}}
     image: ubuntu
     commands:
       - echo ${{CF_BRANCH}}
@@ -23,30 +24,10 @@ steps:
     type: composition
     composition_candidates:
       web2:
-        image: ubuntu:${{CF_BRANCH}}
         command: sh -c 'sleep 90 && echo done_first'
       web3:
         command: sh -c 'sleep 30 && echo done_second'
-    composition:
-      version: '2'
-      services:
-        echo:
-          image: ubuntu
-          command: echo ${{CF_BRANCH}}
-        web:
-          image: ubuntu
-          volumes:
-            - ${{CF_VOLUME}}:/test
-          command: sh -c 'cd /test && ls -a'
-        web2:
-          image: ubuntu
-          command: sh -c 'sleep 60 && echo done_first'
-        web3:
-          image: ubuntu
-          command: sh -c 'sleep 90 && echo done_second'
-      volumes:
-        ${{CF_VOLUME}}:
-          external: true
+    composition: docker-compose.yml
 
   
       # dockerfile: 
