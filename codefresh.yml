@@ -31,10 +31,10 @@ steps:
 #          command: sh -c 'cd /test && ls -a'
         web2:
           image: ubuntu
-          command: sh -c 'sleep 10 && echo done 10'
+          command: sh -c 'sleep 60 && echo done_first'
         web3:
           image: ubuntu
-          command: sh -c 'sleep 30 && echo done 30'
+          command: sh -c 'sleep 120 && echo done_second'
       volumes:
         ${{CF_VOLUME}}:
           external: true
