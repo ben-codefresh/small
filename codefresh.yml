@@ -19,22 +19,23 @@ steps:
   compose:
     type: composition
     composition_candidates:
-      web:
+      web2:
         image: ubuntu
+        command: sh -c 'sleep 10 && echo done_first'
     composition:
       version: '2'
       services:
-#        web:
-#          image: ubuntu
-#          volumes:
-#            - ${{CF_VOLUME}}:/test
-#          command: sh -c 'cd /test && ls -a'
+        web:
+          image: ubuntu
+          volumes:
+            - ${{CF_VOLUME}}:/test
+          command: sh -c 'cd /test && ls -a'
         web2:
           image: ubuntu
           command: sh -c 'sleep 60 && echo done_first'
         web3:
           image: ubuntu
-          command: sh -c 'sleep 120 && echo done_second'
+          command: sh -c 'sleep 90 && echo done_second'
       volumes:
         ${{CF_VOLUME}}:
           external: true
