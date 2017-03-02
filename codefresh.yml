@@ -24,11 +24,11 @@ steps:
     composition:
       version: '2'
       services:
-        web:
-          image: ubuntu
-          volumes:
-            - ${{CF_VOLUME}}:/test
-          command: sh -c 'cd /test && ls -a'
+#        web:
+#          image: ubuntu
+#          volumes:
+#            - ${{CF_VOLUME}}:/test
+#          command: sh -c 'cd /test && ls -a'
         web2:
           image: ubuntu
           command: sh -c 'sleep 10 && echo done 10'
