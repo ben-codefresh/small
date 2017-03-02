@@ -15,7 +15,10 @@ steps:
 #    candidate: ${{build_step_name}}
  #   candidate: bencodefresh/small:latest
  #   tag: latest
-  
+  middle:
+    image: ubuntu
+    commands:
+      - echo ${{CF_BRANCH}}
   compose:
     type: composition
     composition_candidates:
@@ -27,6 +30,9 @@ steps:
     composition:
       version: '2'
       services:
+        echo:
+          image: ubuntu
+          command echo ${{CF_BRANCH}}
         web:
           image: ubuntu
           volumes:
