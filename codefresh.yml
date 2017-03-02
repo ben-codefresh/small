@@ -27,7 +27,7 @@ steps:
         web:
           image: ubuntu
           volumes:
-            - ${{CF_VOLUME}}:/test
+            - ${{CF_VOLUME}}/small:/test
           command: sh -c 'cd /test && ls -a'
       volumes:
         ${{CF_VOLUME}}:
