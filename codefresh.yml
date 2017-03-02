@@ -10,11 +10,25 @@ steps:
       set:
         - qa: mytag
         
-  pushstuff:
-    type: push
+ # pushstuff:
+  #  type: push
 #    candidate: ${{build_step_name}}
-    candidate: bencodefresh/small:latest
-    tag: latest
+ #   candidate: bencodefresh/small:latest
+ #   tag: latest
+  
+  compose:
+    type: composition
+    composition:
+      version: '2'
+      services:
+        web:
+          image: ubuntu
+          volumes:
+            - ${{CF_VOLUME}}:/test
+          command: sh -c 'cd /test && ls -a'
+      volumes:
+        ${{CF_VOLUME}}:
+          external: true
 
   
       # dockerfile: 
