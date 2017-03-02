@@ -2,7 +2,7 @@
       services:
         echo:
           image: ubuntu
-          command: echo ${{CF_BRANCH}}
+          command: echo ${{CF_VOLUME}}
         web:
           image: ubuntu
           volumes:
