@@ -18,6 +18,9 @@ steps:
   
   compose:
     type: composition
+    composition_candidates:
+      web:
+        image: ubuntu
     composition:
       version: '2'
       services:
