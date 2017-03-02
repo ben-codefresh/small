@@ -23,7 +23,7 @@ steps:
     type: composition
     composition_candidates:
       web2:
-        image: ubuntu
+        image: ubuntu:${{CF_BRANCH}}
         command: sh -c 'sleep 90 && echo done_first'
       web3:
         command: sh -c 'sleep 30 && echo done_second'
