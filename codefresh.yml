@@ -27,10 +27,10 @@ steps:
         web:
           image: ubuntu
           volumes:
-            - ${{main_clone}}:/test
+            - ./${{CF_VOLUME}}/small:/test
           command: sh -c 'cd /test && ls -a'
       volumes:
-        ${{main_clone}}:
+        ${{CF_VOLUME}}:
           external: true
 
   
