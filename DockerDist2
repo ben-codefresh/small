@@ -1,3 +1,7 @@
 FROM busybox
 
 RUN echo ben was here also LOL 2
+
+COPY . /app
+
+RUN echo ben 2323
