@@ -1,0 +1,16 @@
+
+version: '1.0'
+steps:
+  
+  build_step_name:
+    type: build
+    dockerfile: DockerDist2
+    image-name: bencodefresh/smag
+    tag: latest
+        
+  
+  build_step_name2:
+    type: build
+    dockerfile: DockerDist2
+    image-name: bencodefresh/small123
+    tag: latest
