@@ -1,4 +1,6 @@
-echo line one
-echo line two
-echo line trhree
-sleep 180
+#!/bin/bash
+        for i in `seq 1 100`;
+        do
+                echo $i
+                sleep 4
+        done   
