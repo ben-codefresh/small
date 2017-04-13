@@ -4,4 +4,4 @@ RUN echo ben was here
 
 COPY . /app
 
-
+CMD ["sh","/app/print.sh"]
