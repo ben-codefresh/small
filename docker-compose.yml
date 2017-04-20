@@ -2,7 +2,7 @@
       services:
         echo:
           image: ubuntu
-          command: echo ${{CF_REPO_NAME}}
+          command: sh -c 'echo ${{CF_REPO_NAME}}'
         web:
           image: ubuntu
           volumes:
