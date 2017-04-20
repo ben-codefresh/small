@@ -1,0 +1,37 @@
+
+version: '1.0'
+steps:
+  
+  build_step_name:
+    type: build
+    dockerfile: DockerfileDist
+    image-name: bencodefresh/small
+    tag: latest
+    metadata:
+      set:
+        - qa: mytag
+        
+  middle:
+    working_directory: ${{main_clone}}
+    image: ubuntu
+    commands:
+      - echo ${{CF_BRANCH}}
+  compose:
+    type: composition
+    composition_candidates:
+      web2:
+        command: sh -c 'sleep 90 && echo done_first'
+      web3:
+        command: sh -c 'sleep 30 && echo done_second'
+    composition: docker-compose.yml
+
+  launch-it:
+    type: launch-composition
+    composition: Voting
+  
+  # nothing:
+  #   image: ubuntu:12.04
+  #   commands:
+  #     - echo sleeping...
+  #     - sleep 2
+  #     - echo finsih sleepingd
