@@ -8,7 +8,7 @@ steps:
     commands:
       - mkdir blah
       - cd blah
-      - echo hello world > temp.txt
+      - echo hello world > ./blah/temp.txt
       - ls -l
       - cd ..
       - ls 
