@@ -4,5 +4,5 @@ RUN echo ben was here
 
 RUN ls
 
-COPY ./blah /app   
+COPY ./blah /app/blah   
 
