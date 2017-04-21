@@ -1,0 +1,24 @@
+version: '1.0'
+steps:
+  
+  
+  start:
+    working_directory: ${{main_clone}}
+    image: ubuntu
+    commands:
+      - mkdir blah
+      - cd blah
+      - echo hello world > temp.txt
+      - ls -l
+      - cd ..
+      - ls 
+      - cat ./blah/temp.txt
+      
+      
+  build_step_name:
+    type: build
+    dockerfile: Dockerfile3
+    image-name: bencodefresh/small
+    tag: latest
+
+        
