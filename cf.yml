@@ -5,7 +5,7 @@ steps:
   build_step_name:
     type: build
     dockerfile: dockerfile
-    image-name: bencodefresh/small
+    image_name: bencodefresh/small
     tag: blah
         
   
