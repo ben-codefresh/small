@@ -4,13 +4,15 @@ steps:
   
   build_step_name:
     type: build
-    dockerfile: DockerDist2
-    image-name: bencodefresh/smag
-    tag: latest
+    dockerfile: dockerfile
+    image-name: bencodefresh/small
+    tag: blah
         
   
-  build_step_name2:
-    type: build
-    dockerfile: DockerDist2
-    image-name: bencodefresh/small123
-    tag: latest
+  push_me:
+    type: push
+    tag: me123
+    candidate: ${{build_step_name}}
+    credentials:
+       username: ${{USER}}
+       password: ${{PASS}}       
