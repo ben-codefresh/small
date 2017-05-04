@@ -5,7 +5,7 @@ steps:
   build_step_name:
     type: build
     dockerfile: Dockerfile
-    image-name: bencodefresh/small
+    image_name: bencodefresh/small
     tag: test
     
         
@@ -40,5 +40,5 @@ steps:
     description: Push to Docker Hub 
     candidate: ${{build_step_name}}
     tag: ${{CF_SHORT_REVISION}}
-    registry: other-123
+    registry: docker-hub
     image_name: bencodefresh/small
