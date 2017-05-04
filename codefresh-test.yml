@@ -1,24 +1,44 @@
 version: '1.0'
 steps:
-  
-  
-  start:
-    working_directory: ${{main_clone}}
-    image: ubuntu
-    commands:
-      - mkdir blah
-      - cd blah
-      - echo hello world > ./blah/temp.txt
-      - ls -l
-      - cd ..
-      - ls 
-      - cat ./blah/temp.txt
-      
+
       
   build_step_name:
     type: build
-    dockerfile: Dockerfile3
+    dockerfile: Dockerfile
     image-name: bencodefresh/small
-    tag: latest
-
+    tag: test
+    
         
+  push_1:
+    type: push
+    description: Push to ECR
+    candidate: ${{build_step_name}}
+    tag: ${{CF_SHORT_REVISION}}
+    registry: ecr
+    image_name: sd/sd/sd/ds
+    
+  push_2:
+    type: push
+    description: Push to BINTRAY
+    candidate: ${{build_step_name}}
+    tag: ${{CF_SHORT_REVISION}}
+    registry: bintray
+    image_name: sd/sd/sd/ds
+    
+  push_3:
+    type: push
+    description: Push to GCR
+    candidate: ${{build_step_name}}
+    tag: ${{CF_SHORT_REVISION}}
+    registry: gcr
+    image_name: sd/sd/sd/ds
+        
+        
+    
+  push_4:
+    type: push
+    description: Push to Docker Hub 
+    candidate: ${{build_step_name}}
+    tag: ${{CF_SHORT_REVISION}}
+    registry: other-123
+    image_name: bencodefresh/small
