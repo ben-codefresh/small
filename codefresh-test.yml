@@ -31,7 +31,7 @@ steps:
     candidate: ${{build_step_name}}
     tag: ${{CF_SHORT_REVISION}}
     registry: gcr
-    image_name: sd/sd/sd/ds
+    image_name: cf-ci-1027/sd/sd/sd/ds
         
         
     
