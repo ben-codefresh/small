@@ -1,0 +1,25 @@
+version: '1.0'
+steps:
+  
+  build_step_name:
+    type: build
+    dockerfile: DockerfileDist
+    image-name: bencodefresh/small
+    tag: latest
+    metadata:
+      set:
+        - qa: mytag
+   
+  build_step_name:
+    type: build
+    dockerfile: DockerfileDist
+    image-name: bencodefresh/small2
+    tag: la
+    
+   
+  build_step_name:
+    type: build
+    dockerfile: DockerfileDist
+    image-name: bencodefresh/small3
+    tag: la
+  
