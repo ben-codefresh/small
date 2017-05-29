@@ -10,14 +10,14 @@ steps:
       set:
         - qa: mytag
    
-  build_step_name:
+  build_step_name2:
     type: build
     dockerfile: DockerfileDist
     image-name: bencodefresh/small2
     tag: la
     
    
-  build_step_name:
+  build_step_name3:
     type: build
     dockerfile: DockerfileDist
     image-name: bencodefresh/small3
